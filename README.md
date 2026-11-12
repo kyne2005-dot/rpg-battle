@@ -1,76 +1,52 @@
-# RPG Battle Game
+RPG Battle Game
 
-A simple text-based RPG game built with Python. The player takes on the role of a hero who travels through different story events, encounters enemies, takes damage, and finds healing along the way. The goal is to survive each encounter while managing your health.
+A simple text-based RPG built with Python. The player controls a hero who travels through a series of story events, fights enemies, takes damage, and finds healing along the way. The goal is to survive every encounter by managing your health.
 
-## Features
-
-- **Hero Class:** Uses object-oriented programming to manage the player's name, health, and maximum health.
-- **Health Management:** Players can take damage and restore health throughout the game.
-- **Randomized Events:** Damage and healing amounts are randomly generated using Python's `random` module.
-- **Health Validation:** Prevents invalid health values and ensures health never exceeds the maximum or falls below zero.
-- **Story Progression:** Players move through a sequence of events using loops and conditional statements.
-- **Game Over System:** The game ends when the player's health reaches zero.
-
-## Technologies Used
-
-- Python 3
-- Random module
-- Object-Oriented Programming (OOP)
-
-## Project Structure
-
-```text
-RPG-Game/
-│
-├── Hero.py
-├── Enemy.py
+Features
+Hero class: Uses object-oriented programming to manage the hero's name, current health, and maximum health.
+Health management: The hero can take damage and restore health during the game.
+Randomized events: Damage and healing amounts are generated with Python's random module, so every run plays out differently.
+Validation: Raises a ValueError for invalid values, and keeps health between 0 and the maximum.
+Story progression: A loop moves the hero through a sequence of story events.
+Game over: The game ends if the hero's health reaches zero.
+Project Structure
+rpg-battle/
+├── Hero.py      # Hero class (health, damage, healing, validation)
+├── main.py      # Main game script: story events and game loop
 └── README.md
-```
+How to Run
 
-## How to Run
+Requires Python 3. No external libraries are needed.
 
-1. Clone this repository:
-
-```bash
 git clone https://github.com/kyne2005-dot/rpg-battle.git
-```
-
-2. Navigate into the project folder:
-
-```bash
-cd RPG-Game
-```
-
-3. Run the game:
-
-```bash
+cd rpg-battle
 python3 main.py
-```
+Sample Output
+The Hero has 200/200 health left
 
-## Concepts Practiced
+You are traveling down the road when you are suddenly attacked by an enemy.
+During the battle you take 77 damage. You need healing before the next battle.
+The Hero has 123/200 health left
 
-This project helped me practice and apply several Python programming concepts:
+You are alive
 
-- Creating classes and objects
-- Constructors (`__init__`)
-- Encapsulation and private attributes
-- Properties and getters
-- Methods and object behavior
-- Input validation and `ValueError`
-- Loops and conditional statements
-- Importing classes between Python files
-- Random number generation
+After you defeat the enemy, you wander and find a chest with healing supplies.
+You find healing and recover 20 health. Now you are ready for battle.
+The Hero has 143/200 health left
 
-## Future Improvements
+You are alive
+Concepts Practiced
+Classes, objects, and constructors (__init__)
+Encapsulation with private attributes and @property
+Input validation with ValueError
+Loops and conditionals
+Splitting code across modules and importing a class
+Future Improvements
+Add multiple enemy types with different stats
+Add a player attack system so the hero can fight back
+Add an inventory with healing items
+Add player choices that change the story
+Add difficulty levels
+Author
 
-- Add different enemy types and boss battles.
-- Implement an attack system for the player.
-- Create an inventory system with healing items.
-- Add player choices that affect the story.
-- Introduce different difficulty levels.
-
-## Author
-
-Kyne Pinckney
-
-Computer Science Student | Georgia State University
+Kyne Pinckney, Computer Science student at Georgia State University
